@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Band — RiffRecords</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/band-details.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a class="brand" href="index.html"><span class="disc"></span>RIFFRECORDS</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a class="cart-link" href="cart.html">Cart <span class="cart-badge" id="cartBadge">0</span></a>
+    </div>
+  </nav>
+</header>
+
+<main id="bandDetailsWrapper">
+  <section class="band-hero">
+  <div class="container band-hero-inner">
+    <img id="bandImage" class="band-image" src="" alt="">
+    <div>
+      <span class="band-genre" id="bandGenre"></span>
+      <h1 id="bandName">Loading…</h1>
+      <p id="bandBio"></p>
+    </div>
+  </div>
+</section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Vinyls</h2>
+      </div>
+      <div class="grid" id="vinylGrid"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  amiko dato finaluri.
+</footer>
+
+<script src="js/cart.js"></script>
+<script src="js/band-details.js"></script>
+</body>
+</html>

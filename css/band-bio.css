@@ -1,0 +1,225 @@
+:root {
+  --color-bg: #0d0c0a;
+  --color-bg-raised: #17150f;
+  --color-text: #ece7d8;
+  --color-muted: #8f8a78;
+  --color-line: #322e22;
+  --color-accent: #f5c518;
+  --color-danger: #b3121a;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.55;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffd645;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(23, 21, 15, 0.95);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  gap: 16px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+  font-size: 0.9rem;
+}
+
+.nav-links a {
+  color: var(--color-muted);
+  transition: color 0.15s;
+}
+
+.nav-links a:hover {
+  color: var(--color-accent);
+}
+
+.layout {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px;
+  flex: 1;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+}
+
+.band-header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--color-line);
+  align-items: center;
+  text-align: center;
+}
+
+.band-image {
+  width: 120px;
+  height: 120px;
+  border: 1px solid var(--color-line);
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.band-info h1 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  line-height: 0.95;
+}
+
+.band-genre {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-danger);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.band-bio {
+  color: var(--color-muted);
+  max-width: 640px;
+}
+
+.section {
+  background: var(--color-bg-raised);
+  border: 1px solid var(--color-line);
+  border-radius: 2px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--color-line);
+  padding-bottom: 10px;
+}
+
+.section p {
+  margin-bottom: 12px;
+  color: var(--color-muted);
+}
+
+.track-list,
+.album-list {
+  list-style: none;
+}
+
+.track-list li,
+.album-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-line);
+  font-size: 0.95rem;
+}
+
+.track-list li:last-child,
+.album-list li:last-child {
+  border-bottom: none;
+}
+
+.track-title {
+  color: var(--color-text);
+}
+
+.track-year {
+  color: var(--color-muted);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  margin-left: 8px;
+}
+
+.footer {
+  background: var(--color-bg-raised);
+  border-top: 1px solid var(--color-line);
+  margin-top: 32px;
+}
+
+.footer-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+@media (min-width: 760px) {
+  .band-header {
+    flex-direction: row;
+    align-items: flex-end;
+    text-align: left;
+  }
+
+  .band-image {
+    width: 160px;
+    height: 160px;
+    flex-shrink: 0;
+  }
+
+  .band-info h1 {
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    gap: 20px;
+    font-size: 0.9rem;
+  }
+}

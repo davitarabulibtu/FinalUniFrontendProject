@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — RiffRecords</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a class="brand" href="index.html"><span class="disc"></span>RIFFRECORDS</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a class="cart-link" href="cart.html">Cart <span class="cart-badge" id="cartBadge">0</span></a>
+    </div>
+  </nav>
+</header>
+
+<main class="section">
+  <div class="container">
+    <div class="section-head"><h2>Checkout</h2></div>
+
+    <div class="checkout-layout" id="checkoutLayout">
+      <form id="checkoutForm" novalidate>
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="e.g. Andria Kapanadze">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com">
+        </div>
+        <div class="form-group">
+          <label for="address">Shipping Address</label>
+          <textarea id="address" name="address" rows="3" placeholder="Street, city, postal code"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+995 5XX XX XX XX">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Place Order</button>
+      </form>
+
+      <aside class="order-summary-box">
+        <h3>Order Summary</h3>
+        <div id="orderSummaryList"></div>
+        <div class="mini-line" style="border-bottom:none; margin-top:10px; font-size:1rem; color:var(--color-text);">
+          <strong>Total</strong><strong id="orderSummaryTotal">$0.00</strong>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  amiko dato finaluri.
+</footer>
+
+<script src="js/cart.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>
